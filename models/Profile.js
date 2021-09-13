@@ -10,6 +10,11 @@ const profileSchema = new Schema({
         required: true,
         ref: User
     },
+    name: {
+        type: 'String',
+        trim: true,
+        required: true
+    },
     title: {
         type: 'String',
         maxlength: 100,

@@ -4,9 +4,9 @@ const { Schema, model } = require('mongoose')
 const Profile = require('./Profile');
 
 const uerSchema = new Schema({
-    name: {
+    username: {
         type: 'String',
-        maxlength: 30,
+        maxlength: 15,
         required: true,
         trim: true
     },
