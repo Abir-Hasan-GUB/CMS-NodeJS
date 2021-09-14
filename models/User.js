@@ -1,7 +1,7 @@
 //name, email, password, profile
 
 const { Schema, model } = require('mongoose')
-const Profile = require('./Profile');
+// const Profile = require('./Profile');
 
 const uerSchema = new Schema({
     username: {
@@ -21,7 +21,7 @@ const uerSchema = new Schema({
     },
     profile: {
         type: Schema.Types.ObjectId,
-        ref: Profile
+        ref: 'Profile'
     }
 
 }, {

@@ -1,7 +1,7 @@
 //title, body, author, tags, thumbnil, readTime, likes, dislikes, comments
 
 const { Schema, model } = require('mongoose')
-const User = require('./User')
+// const User = require('./User')
 const Comment = require('./Comment')
 
 const postSchema = new Schema({
@@ -18,7 +18,7 @@ const postSchema = new Schema({
     author: {
         type: Schema.Types.ObjectId,
         required: true,
-        ref: User
+        ref: 'User'
     },
     tags: {
         type: 'String',
@@ -30,7 +30,7 @@ const postSchema = new Schema({
     dislike: [Schema.Types.ObjectId],
     comments: [{
         type: Schema.Types.ObjectId,
-        ref: Comment
+        ref: 'Comment'
     }]
 }, { timestramps: true })
 
